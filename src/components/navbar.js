@@ -19,8 +19,7 @@ const BaNav = () => {
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="dark"
-      variant="dark"
+      style={{backgroundColor:"rgb(0, 174, 255)", color:"white"}}
       className="fixed-top"
     >
       <Container>
@@ -37,10 +36,10 @@ const BaNav = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/SchoolList">Daftar Sekolah</Nav.Link>
+            <Nav.Link href="/SchoolList"><strong>Daftar Siswa</strong></Nav.Link>
           </Nav>
-          <Button onClick={Logout} className="button" variant="outline-light">
-            Log Out
+          <Button onClick={Logout} className="button" style={{borderRadius:"20px"}} variant="outline-dark">
+            <strong>Log Out</strong>
           </Button>
         </Navbar.Collapse>
       </Container>

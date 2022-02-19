@@ -6,7 +6,7 @@
   display: flex;
 }
 .company__info {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(0, 174, 255);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   display: flex;
@@ -70,14 +70,14 @@
   color: rgb(48, 48, 48);
   font-weight: 600;
   background-color: #fff;
-  border: 1px solid rgb(48, 48, 48);
+  border: 1px solid rgb(0, 174, 255);
   margin-top: 1.5em;
   margin-bottom: 1em;
   margin-left: 3.5em;
 }
 .bttn:hover,
 .bttn:focus {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(0, 174, 255);
   color: #fff;
 }
 .top {

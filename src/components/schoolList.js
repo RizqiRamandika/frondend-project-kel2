@@ -11,12 +11,12 @@ const SchoolList = () => {
   }, []);
 
   const getSchool = async () => {
-    const schools = await axios.get("http://localhost:4000/school");
+    const schools = await axios.get("http://localhost:5000/siswa");
     setSchool(schools.data);
   };
 
   const deleteSchool = async (id) => {
-    await axios.delete(`http://localhost:4000/school/${id}`);
+    await axios.delete(`http://localhost:5000/siswa/${id}`);
     getSchool();
   };
 
@@ -25,32 +25,32 @@ const SchoolList = () => {
       <main className="pt-3" style={{ marginTop: "60px" }}>
         <div className="row">
           <div className="col-md-12">
-            <h4>TAMBAH SEKOLAH</h4>
+            <h4 style={{textAlign:"center"}}>DAFTAR SISWA</h4>
           </div>
         </div>
-        <Card.Header className="bg-dark text-white">
+        <Card.Header className="text-white" style={{backgroundColor:"rgb(0, 174, 255)"}}>
           <h6 className="pt-2">
             <i class="fas fa-plus-circle"></i>{" "}
             <Link to="/addSchool" className="text-light noUnderline">
-              Tambahkan Data baru
+              Tambahkan Siswa Baru
             </Link>
           </h6>
         </Card.Header>
-        <Table striped bordered hover variant="dark" className="text-center">
+        <Table hover style={{backgroundColor:"rgb(0, 174, 255)"}} className="text-center">
           <thead>
             <tr>
-              <th>No</th>
-              <th>Nama</th>
-              <th>Alamat</th>
-              <th>Actions</th>
+              <th style={{color:"white"}}>No</th>
+              <th style={{color:"white"}}>Nama</th>
+              <th style={{color:"white"}}>Kelas</th>
+              <th style={{color:"white"}}>Actions</th>
             </tr>
           </thead>
           <tbody>
             {schools.map((school, index) => (
               <tr key={school.id}>
-                <td>{index + 1}</td>
-                <td>{school.nama}</td>
-                <td>{school.alamat}</td>
+                <td style={{color:"white"}}>{index + 1}</td>
+                <td style={{color:"white"}}>{school.nama}</td>
+                <td style={{color:"white"}}>{school.kelas}</td>
                 <td>
                   <Link to={`/EditSchool/${school.id}`}>
                     <Button variant="outline-light" size="sm">
